@@ -1,0 +1,37 @@
+.untapped{
+    font-size: 24px;
+    background-color: white;
+    margin: 5px 5px;
+    border: 1px solid #a5d24a;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    display: inline-block;
+    padding: 5px;
+    font-family: helvetica;
+    user-select: none;
+    border-radius: 4px;
+}
+
+.tapped{
+    font-size: 24px;
+    background-color: #a5d24a;
+    margin: 5px 5px;
+    border: 1px solid #a5d24a;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    display: inline-block;
+    padding: 5px;
+    font-family: helvetica;
+    border-radius: 4px;
+    user-select: none;
+}
+.container{
+    margin-left: 120px;
+    /*margin-right: 20px;*/
+}
+.row{
+    padding: 0;
+}
+.container{
+    padding: 0;
+}
