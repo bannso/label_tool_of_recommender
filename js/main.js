@@ -1,4 +1,5 @@
 ROOT = "http://localhost:5000/";
+//标签需要替换为  标签.xls  的标签集合
 LABEL_1 = ['类别1','类别2','类别3','类别1','类别2','类别3','类别1','类别2','类别3','类别1','类别2','类别3','类别1','类别2','类别3']
 LABEL_2 = ['类别1','类别2','类别3','类别1','类别2','类别3','类别1','类别2','类别3','类别1','类别2','类别3','类别1','类别2','类别3']
 
@@ -14,6 +15,7 @@ for(var i=0;i<LABEL_1.length;i++){
     part.setAttribute("class","untapped");
     first.appendChild(part);
 }
+//用户点击，改变便签样式
 var divs_1 = first.getElementsByTagName("div");
 for(var i=0;i<divs_1.length;i++){
     divs_1[i].onclick = function(){
@@ -75,8 +77,8 @@ document.getElementById("article_id_btn").onclick = function load_articles(){
 $("#confirm").click(function(){
     var divs_selected_1 = $("#label-1 .tapped");
     var divs_selected_2 = $("#label-2 .tapped");
-    var labels_selected_1 = [];
-    var labels_selected_2 = [];
+    var labels_selected_1 = [];//选中的标签集合1
+    var labels_selected_2 = [];//选中的标签集合2
     for(var i=0;i<divs_selected_1.length;i++){
         labels_selected_1.push(divs_selected_1[i].innerText);
     }
