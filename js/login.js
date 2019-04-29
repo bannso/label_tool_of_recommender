@@ -145,7 +145,7 @@ $(document).ready(function() {
 		}
 
 		var sqq = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
-		if (!sqq.test($('#email').val()) || $('#email').val().length < 5 || $('#email').val().length > 12) {
+		if (!sqq.test($('#email').val()) || $('#email').val().length < 5) {
 			$('#email').focus().css({
 				border: "1px solid red",
 				boxShadow: "0 0 2px red"

@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>文章标注工具</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="../css/bootstrap-select.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -23,11 +27,9 @@
     </div>
 </nav>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8" style="background-color: lightblue;height: 100px;height: 600px;margin-top: 40px;padding-right: 50px">
+        <div class="col-lg-8" style="background-color: lightblue;height: 600px;margin-top: 40px;padding-right: 50px;overflow-y: scroll">
             <div class="content">
-                <p>
-                    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;胃癌晚期术后常见的并发症</h2>
+                <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;胃癌晚期术后常见的并发症</h2>
                 <div class="detailc" style="font-size: 18px">
                     <p>　　很多的疾病在早期是不易被人们察觉的，胃癌疾病就是这样，只有到了晚期人们有一些症状的时候才会发现，但是很多的人还会把胃癌和一些疾病相混淆，但是胃癌的晚期症状很多的人是不了解的，胃癌晚期的表现有哪些呢?我们看看专家的介绍。</p>
 
@@ -42,33 +44,63 @@
                     <p>　　4.胃癌晚期术后严重腹泻，胃癌晚期手术虽然能达到将大部分癌症组织切除的功能，但也可能导致胃肠功能紊乱而出现严重腹泻，一个原因就是导致胃神经切断、胃泌素浓度等有关。发生这样的症状，应积极给予止泻药物，同时给予补液，以免患者发生脱水。</p>
 
                     <p>　　晚期的症状人们看了以上的介绍，心里面有了一定的认识，人们在这个快速发展的社会，要注意自己的身体的变化，患上疾病的时候要注意选择好的治疗方法，但是也要注意避免一些因素的出现。</p>
+                    <p>　　很多的疾病在早期是不易被人们察觉的，胃癌疾病就是这样，只有到了晚期人们有一些症状的时候才会发现，但是很多的人还会把胃癌和一些疾病相混淆，但是胃癌的晚期症状很多的人是不了解的，胃癌晚期的表现有哪些呢?我们看看专家的介绍。</p>
+
+                    <p>　　癌晚期术后常见的并发症有：</p>
+
+                    <p>　　1.胃癌晚期通常会导致上腹部不适以及饭后的饱胀感，并且随着病情发展，症状日益加重。</p>
+
+                    <p>　　2.胃癌晚期会出现严重的胃排空障碍，也就是说，当胃处于排空的状况时，会出现严重的胃痛。胃癌晚期的疼痛无定时，它不像胃溃疡或十二指肠溃疡，具有饭后痛或饭前痛的特点，胃癌的疼痛典型特征就是何吃饭与否没有直接关系，随时都有可能发生疼痛。</p>
+
+                    <p>　　3.胃癌晚期往往是突然性地表现为食欲不振和厌油腻。这要与肝炎相区别。肝炎常有转氨酶升高以及发烧乏力、尿黄呈浓茶色、黄疸等全身症状。</p>
+
+                    <p>　　4.胃癌晚期术后严重腹泻，胃癌晚期手术虽然能达到将大部分癌症组织切除的功能，但也可能导致胃肠功能紊乱而出现严重腹泻，一个原因就是导致胃神经切断、胃泌素浓度等有关。发生这样的症状，应积极给予止泻药物，同时给予补液，以免患者发生脱水。</p>
+
+                    <p>　　晚期的症状人们看了以上的介绍，心里面有了一定的认识，人们在这个快速发展的社会，要注意自己的身体的变化，患上疾病的时候要注意选择好的治疗方法，但是也要注意避免一些因素的出现。</p>
                 </div>
-                </p>
             </div>
         </div>
-        <div class="col-lg-4">
-            <div class="labels_area">
-                <div id="first">
-                    <h3>level-1：</h3>
-                    <div id="label-1"></div>
+        <div class="col-lg-4" style="margin-top: 40px;padding-left: 10px;height: 600px;position: relative;">
+            <div class="topic_group">
+                <div class="subject_heading">
+                    <div><label class="control-label" style="font-size: 18px;margin-top: 10px;margin-left: 10px;">主题词（单选）：</label></div>
+                    <div class="col-lg-12">
+                        <select id="subject_heading" class="selectpicker show-menu-arrow form-control">
+                        </select>
+                    </div>
+                    <!--<button class="col-lg-3 btn-success" onclick="getVal()">获取值</button>-->
                 </div>
-                <br>
-                <div id="second">
-                    <h3>level-2：</h3>
-                    <div id="label-2"></div>
+                <div class="subtopic">
+                    <div><label class="control-label" style="font-size: 18px;margin-top: 15px;margin-left: 10px;">副主题词（多选）：</label></div>
+                    <div class="col-lg-9" style="margin-top: 10px">
+                        <select id="subtopic_1" class="selectpicker show-menu-arrow form-control" multiple>
+                        </select>
+                    </div>
+                    <div class="col-lg-9"  style="margin-top: 10px">
+                        <select id="subtopic_2" class="selectpicker show-menu-arrow form-control" multiple>
+                        </select>
+                    </div>
+                    <div class="col-lg-9"  style="margin-top: 10px">
+                        <select id="subtopic_3" class="selectpicker show-menu-arrow form-control" multiple>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <button class="btn-success btn-lg" style="float: right;" id="confirm">确认</button>
+                <div class="topics">
+                    <div><label class="control-label" style="font-size: 18px;margin-top: 10px;margin-left: 10px;">标注结果：</label></div>
+                    <!--<button onclick="getTopics()" class="btn-default">TEST</button>-->
+                    <div id="results">
+                        <div id="result_subject_heading" style="margin-left: 10px;font-size: 17px;"></div>
+                        <div id="result_subtopics" style="margin-left: 10px;font-size: 17px;"></div>
+                    </div>
                 </div>
             </div>
+            <div class="confirm"><button class="btn-success" id="confirm">上传结果</button></div>
+            <div class="abandon"><button class="btn-default" id="abandon">不予录入</button></div>
         </div>
     </div>
 </div>
-<script src="../js/jquery-1.11.3.min.js"></script>
-<script src="../js/bootstrap.js"></script>
+<!--<script src="../js/jquery-1.11.3.min.js"></script>-->
+<!--<script src="../js/bootstrap.js"></script>-->
 <script src="../js/main.js"></script>
-<script>
-
-</script>
 </body>
 </html>

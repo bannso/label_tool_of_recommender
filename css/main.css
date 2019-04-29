@@ -1,3 +1,8 @@
+html,body,.container,.row{
+    margin: 0;
+    padding: 0;
+}
+
 .untapped{
     font-size: 24px;
     background-color: white;
@@ -34,4 +39,41 @@
 }
 .container{
     padding: 0;
+}
+.subject_heading{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    background-color: beige;
+}
+.subtopic{
+    position: absolute;
+    top: 10%;
+    height: 40%;
+    width: 100%;
+    background-color: beige;
+}
+.topics{
+    background-color: beige;
+    position: absolute;
+    top: 40%;
+    height: 60%;
+    width: 100%;
+}
+topic_group{
+    position: absolute;
+    top: 0%;
+    height: 30%;
+    width: 100%;
+    background-color: beige;
+}
+.confirm{
+    position: absolute;
+    top: 90%;
+    right: 5%;
+}
+.abandon{
+    position: absolute;
+    top: 90%;
+    left: 5%;
 }
